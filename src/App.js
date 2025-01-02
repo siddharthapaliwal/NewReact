@@ -1,32 +1,20 @@
-//App.js last write commant read
+// src/App.js
 import React from 'react';
-import DisplayData from './DisplayData';  // Import the class component
-import Greeting from './Greeting';
-import WelcomeMessage from './WelcomeMessage'
-class App extends React.Component {
-  render() {
-    // Define the props to pass to the DisplayData component
-    const name = "Alice";
-    const items = ["Apple", "Banana", "Cherry"];
-    const user = {
-      name: "Alice Smith",
-      age: 30,
-      location: "New York"
-    };
+import Counter from './Counter';
+import FetchData from './FetchData';
+import CounterRedux from './CounterRedux';
+import CounterWithRef from './CounterWithRef';
 
-    return (
-      <div>
-        <DisplayData name={name} items={items} user={user} />
-        <Greeting name="Alice" />
-        <Greeting name="Bob" />
-        <Greeting name="Charlie" />
-        <WelcomeMessage />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div>
+      <h1>React Hooks Demo</h1>
+      <Counter />
+      <FetchData />
+      <CounterRedux />
+      <CounterWithRef />
+    </div>
+  );
 }
 
 export default App;
-// class and funation commponent using with file 
-//class string array object and value pass other class
-// funation using props data or value pass other funation
